@@ -19,7 +19,7 @@ namespace com.lti.casestudy.day1
 
         static Student()
         {
-            collegeName = "IIIT UNA ";
+            collegeName = "MITS GWL ";
         }
         public Student()
         {
