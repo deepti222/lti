@@ -1,0 +1,102 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace com.lti.casestudy.day1
+{
+    public class Student
+    {
+        int id;
+        string name;
+        DateTime dateOfBirth;
+        public static string collegeName;
+        static int count = 10001;
+        public int Id { get => id;}
+        public string Name { get => name; set => name = value; }
+        public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
+
+        static Student()
+        {
+            collegeName = "IIIT UNA ";
+        }
+        public Student()
+        {
+            id = count++;
+        }
+        public Student(string name1,DateTime dob)
+        {
+            id = count++;
+            name = name1;
+            DateOfBirth = dob;
+        }
+        public Student(string name1)
+        {
+            id = count++;
+            name = name1;
+        }
+        public void PrintStudentDetails()
+        {
+            Console.WriteLine("Student Details:"+Name+" "+DateOfBirth+" "+collegeName);
+ 
+        }
+ 
+    }
+}
+
+
+
+using System;
+ 
+namespace com.lti.casestudy.day1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[][] s = new string[2][];
+            s[0] = new string[2];
+            s[0][0] = "deep";
+            s[0][1] = "deepa";
+            Console.WriteLine(s[0][1]);
+        }
+    }
+}
+
+
+
+
+/*
+1. Create a custom exception class inheriting it from Application Exception
+2. Implement default and parameterized constructors
+3. Check the business condition
+4. If business rule is violated, create the object of exception class and throw the exception
+5. handle the custom exception in the try catch block
+*/
+
+
+
+Collections Framework - to store and retrive multiple data
+=> dynamic memory allocation
+=> heterogeneous data
+
+Two types 1. Generic 2. non-generic
+
+List-based and Key-value pair based
+
+Non-Generic:
+
+List-based 1. ArrayList
+2. String collection
+
+Key Value pair based 1. SortedList
+2. Hashtable
+
+Generic:
+
+List-based -> List<>
+Key-value based -> Dictionary<,>
+
+Generics: it is a concept that can be applied on classes, methods and collections to achieve Type-safety and reusability
+*/
